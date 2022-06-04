@@ -20,8 +20,19 @@ def play(word):
 
     # Start Screen
     print("Let's play Hangman!")
+    print("===================")
     print(display_hangman(tries))
+    print("===================")
     print(word_completion)
+    print("RULES OF THE GAME!!")
+    print("1) The Game starts NOW, Press a letter you think the word contains")
+    print("2) You have 6 attempts to guess the word right")
+    print("3) Each wrong guess means hangman is losing health!")
+    print("4) If you fail to win, hangman dies!!")
+    print("Let's see if you're a hero or not!")
+    print("*********************************")
+    print("GOOD LUCK!")
+    print("*********************************")
     print("\n")
 
     # While The game is running
