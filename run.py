@@ -26,7 +26,7 @@ def play(word):
 
     # While The game is running
     while not guessed and tries > 0:
-        guess = input("Please guess a letter or word: ").upper()
+        guess = input("Please guess a letter or word: \n").upper()
         if len(guess) == 1 and guess.isalpha():
             # Repeating your choice
             if guess in guessed_letters:
@@ -79,44 +79,44 @@ def play(word):
 def display_hangman(tries):
     """Displays the hangman per guess as you play"""
     stages = [  # final state: head, torso, both arms, and both legs
-                """
+                 """
                    --------
                    |      |
                    |      O
-                   |     \|/
+                   |     \\|/
                    |      |
                    |     / \\
-                  =-=
+                   -
                 """,
                 # head, torso, both arms, and one leg
                 """
                    --------
                    |      |
                    |      O
-                   |     \|/
+                   |     \\|/
                    |      |
-                   |     / 
-                  =-=
+                   |     /
+                   -
                 """,
                 # head, torso, and both arms
                 """
                    --------
                    |      |
                    |      O
-                   |     \|/
+                   |     \\|/
                    |      |
-                   |      
-                  =-=
+                   |
+                   -
                 """,
                 # head, torso, and one arm
                 """
                    --------
                    |      |
                    |      O
-                   |     \|
+                   |     \\|
                    |      |
-                   |     
-                  =-=
+                   |
+                   -
                 """,
                 # head and torso
                 """
@@ -125,28 +125,28 @@ def display_hangman(tries):
                    |      O
                    |      |
                    |      |
-                   |     
-                  =-=
+                   |
+                   -
                 """,
                 # head
                 """
                    --------
                    |      |
                    |      O
-                   |    
-                   |      
-                   |     
-                  =-=
+                   |
+                   |
+                   |
+                   -
                 """,
                 # initial empty state
                 """
                    --------
                    |      |
-                   |      
-                   |    
-                   |      
-                   |     
-                  =-=
+                   |
+                   |
+                   |
+                   |
+                   -
                 """
     ]
     return stages[tries]
@@ -157,7 +157,7 @@ def main():
     word = get_word()
     play(word)
     # Choose to reply the game or exit the application
-    while input("Play Again? (Y/N) ").upper() == "Y":
+    while input("Play Again? (Y/N) \n").upper() == "Y":
         word = get_word()
         play(word)
 
