@@ -1,11 +1,11 @@
 import random
 # Import The Module for the game
-from words import word_list
+from words import wordList
 
 
-def get_word():
+def getWord():
     """Selects the word for the round"""
-    word = random.choice(word_list)
+    word = random.choice(wordList)
     return word.upper()
 
 # def play(word):
@@ -93,4 +93,11 @@ def hangman():
     ]
     return stages
 
-    
+
+def main():
+    word  = getWord()
+    play(word)
+    while input("Play again? (Y/N) ").upper|() == "Y":
+        word = getWord()
+        play(word)
+
