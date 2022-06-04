@@ -1,11 +1,9 @@
 import random
-# Import The Module for the game
-from words import wordList
+from words import word_list
 
 
-def getWord():
-    """Selects the word for the round"""
-    word = random.choice(wordList)
+def get_word():
+    word = random.choice(word_list)
     return word.upper()
 
 
@@ -33,10 +31,10 @@ def play(word):
                 guessed_letters.append(guess)
                 word_as_list = list(word_completion)
                 indices = [
-                    i for i,
-                    letter in enumerate(word)
+                    i for i, 
+                    letter in enumerate(word) 
                     if letter == guess
-                ]
+                    ]
                 for index in indices:
                     word_as_list[index] = guess
                 word_completion = "".join(word_as_list)
@@ -139,9 +137,12 @@ def display_hangman(tries):
 
 
 def main():
-    word  = getWord()
+    word = get_word()
     play(word)
-    while input("Play again? (Y/N) ").upper|() == "Y":
-        word = getWord()
+    while input("Play Again? (Y/N) ").upper() == "Y":
+        word = get_word()
         play(word)
 
+
+if __name__ == "__main__":
+    main()
