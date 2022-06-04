@@ -1,22 +1,29 @@
 import random
+# Words collected for game
 from words import word_list
 
 
 def get_word():
+    """Selects the word from words module for the current round"""
     word = random.choice(word_list)
     return word.upper()
 
 
 def play(word):
+    """Guess the word for the current round"""
     word_completion = "_" * len(word)
     guessed = False
     guessed_letters = []
     guessed_words = []
     tries = 6
+
+    # Start Screen
     print("Let's play Hangman!")
     print(display_hangman(tries))
     print(word_completion)
     print("\n")
+
+    # While The game is running
     while not guessed and tries > 0:
         guess = input("Please guess a letter or word: ").upper()
         if len(guess) == 1 and guess.isalpha():
@@ -31,7 +38,7 @@ def play(word):
                 guessed_letters.append(guess)
                 word_as_list = list(word_completion)
                 indices = [
-                    i for i, 
+                    i for i,
                     letter in enumerate(word) 
                     if letter == guess
                     ]
@@ -52,24 +59,30 @@ def play(word):
                 word_completion = word
         else:
             print("Not a valid guess.")
+
+        # The end of the round displays here
         print(display_hangman(tries))
         print(word_completion)
         print("\n")
+    
+    # If you guess the word right
     if guessed:
         print("Congrats, you guessed the word! You win!")
+    # When the user loses the round
     else:
         print("You ran out of tries. The word was " + word + ".")
 
 
 def display_hangman(tries):
+    """Displays the hangman per guess as you play"""
     stages = [  # final state: head, torso, both arms, and both legs
                 """
                    --------
                    |      |
                    |      O
-                   |     \\|/
+                   |     \|/
                    |      |
-                   |     / \\
+                   |     / \
                    -
                 """,
                 # head, torso, both arms, and one leg
@@ -77,7 +90,7 @@ def display_hangman(tries):
                    --------
                    |      |
                    |      O
-                   |     \\|/
+                   |     \|/
                    |      |
                    |     / 
                    -
@@ -87,7 +100,7 @@ def display_hangman(tries):
                    --------
                    |      |
                    |      O
-                   |     \\|/
+                   |     \|/
                    |      |
                    |      
                    -
@@ -97,7 +110,7 @@ def display_hangman(tries):
                    --------
                    |      |
                    |      O
-                   |     \\|
+                   |     \|
                    |      |
                    |     
                    -
