@@ -116,3 +116,4 @@ The following git commands were used throughout development to push code to the 
 * Readme inspired by Trevor Lehmann - https://github.com/trevthedev777/javascriptQuizGameMultipleChoice/blob/main/README.md
 * Hangman was inspired by youtube tutorial - https://www.youtube.com/watch?v=cJJTnI22IF8
 * Code Institute for providing the template for teh Python essentials project 
+* Words generated randomly from https://randomwordgenerator.com/
