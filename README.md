@@ -2,7 +2,7 @@
 
 My Hangman python game tests your vocabulary skills but allowing you to guess the words correctly or each letter per turn. The Objective of the game is to guess the word correctly before the Death of Hangman
 
-![Mock Up](https://github.com/trevthedev777/javascriptQuizGameMultipleChoice/blob/main/assets/readme%20images/mockUp.png?raw=true)
+![Mock Up]()
 
 [Hangman Game Live Link](https://hangmanpythongame.herokuapp.com/)
 
