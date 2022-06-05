@@ -106,6 +106,7 @@ The following git commands were used throughout development to push code to the 
 - Enter the name of the application and state your region
 - Deployment method was linked to my Github account
 - In settings I had to insert a Config Var or Key: PORT and Value: 8000
+- Added build packs of Python and Node.js
 - Select deploy site and watch the magic and enjoy your efforts
 
 ## Credits 
