@@ -6,6 +6,11 @@ My Hangman python game tests your vocabulary skills but allowing you to guess th
 
 [Hangman Game Live Link](https://hangmanpythongame.herokuapp.com/)
 
+## Flow Diagram
+
+![Flow Diagram](![Mock Up](https://github.com/trevthedev777/hangman/blob/main/assets/readme_imgs/Flow%20Diagram.jpeg?raw=true)
+)
+
 ## Features
 
 - This backend application was designed to be run using the terminal only, the objective was to show the neccessary skills to build. run, test and deploy an application that can run on a Heroku mock terminal 
